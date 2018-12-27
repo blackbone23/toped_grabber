@@ -20,30 +20,30 @@ mysql_select_db("test",$conn) or die("Couldn't select database."); //koneksi ke 
 
 function getLastSKU($conn, $category) { //mendapatkan sku terakhir dari kategori yang dipilih
     $sql_sku_cat = 'SELECT SKU from mytable WHERE Categories = "'.$category.'" ORDER by ID DESC LIMIT 1' ;
-    
-    
+
+
     $ambildata = mysql_query($sql_sku_cat, $conn) or die("Cannot select db.");
     if(!$ambildata ) {
         die('Gagal ambil data: ' . mysql_error());
     }
-    
+
     $check = mysql_fetch_array($ambildata);
-    
+
     return $check['SKU'];
-    
+
 }
 
 function product_checker($conn, $product_name){
     $sql_name = 'SELECT * FROM `mytable` WHERE Name = "'.$product_name.'"' ;
-    
-    
+
+
     $ambildata = mysql_query($sql_name, $conn) or die("Cannot select db.");
     if(!$ambildata ) {
         die('Gagal ambil data: ' . mysql_error());
     }
-    
+
     $check = mysql_fetch_array($ambildata);
-    
+
     if ($check != NULL) {
         header("Location: index.php?message=produk_ada");
     }
@@ -53,7 +53,7 @@ function product_checker($conn, $product_name){
 
 function insertProduct($conn, $insert) { //insert product baru ke database csv
     list($a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l, $m, $n, $o, $p, $q, $r) = $insert;
-    $insert_product = "INSERT INTO mytable (`ID`,`TYPE`,`SKU`,`Name`,`Published`,`Is_featured`,`Visibility_in_catalog`,`Short_description`,`Tax_status`,`In_stock`,`Backorders_allowed`,`Sold_individually`,`Allow_customer_reviews`,`Regular_price`,`Categories`,`Position`,`Attribute_1_name`,`Attribute_1_visible`) VALUES ('$a','$b','$c','$d','$e','$f','$g','$h','$i','$j','$k','$l','$m','$n','$o','$p','$q','$r')";    
+    $insert_product = "INSERT INTO mytable (`ID`,`TYPE`,`SKU`,`Name`,`Published`,`Is_featured`,`Visibility_in_catalog`,`Short_description`,`Tax_status`,`In_stock`,`Backorders_allowed`,`Sold_individually`,`Allow_customer_reviews`,`Regular_price`,`Categories`,`Position`,`Attribute_1_name`,`Attribute_1_visible`) VALUES ('$a','$b','$c','$d','$e','$f','$g','$h','$i','$j','$k','$l','$m','$n','$o','$p','$q','$r')";
     $query_input = mysql_query($insert_product, $conn);
 //     return $query_input;
     header("Location: index.php?sku=".$c."&progress=".$query_input);
@@ -61,31 +61,31 @@ function insertProduct($conn, $insert) { //insert product baru ke database csv
 
 function newID($conn) { //menambahkan ID baru pada database csv (database csv tidak berformat auto increment
     $sql_last_id = 'SELECT ID from mytable ORDER by ID DESC LIMIT 1 ';
-    
+
     $ambildata = mysql_query($sql_last_id, $conn) or die("Cannot select db.");
     if(!$ambildata ) {
         die('Gagal ambil data: ' . mysql_error());
     }
-    
+
     $check = mysql_fetch_array($ambildata);
-    
+
     $new_id = $check['ID'] + 1;
-    return $new_id; 
+    return $new_id;
 }
 
 function nextSKU($conn, $category) { //menambah SKU baru sesuai urutan sku yang sudah ada
     $last_sku = getLastSKU($conn, $category);
     $split = explode('-', $last_sku);
-    
+
     if (isset($split[1])) {
         $sku = $split[1];
     } else {
         $sku = $split[0];
     }
-    
+
     $new_sku_num = $sku + 1;
     $digit = count(str_split($new_sku_num));
-    
+
     if ($digit == 1) {
         $new_sku_num = '000'.$new_sku_num;
     } elseif ($digit ==  2) {
@@ -95,7 +95,7 @@ function nextSKU($conn, $category) { //menambah SKU baru sesuai urutan sku yang 
     } else {
         $new_sku_num = $new_sku_num;
     }
-    
+
     $sku_letter = skuLetter($category); //menggunakan convert kategori ke SKU
     $new_sku = $sku_letter.'-'.$new_sku_num;
 
@@ -252,15 +252,15 @@ function skuLetter($category){ //redirect kategori ke SKU
 }
 
 function directory_check($category) { //membuat folder baru berdasarkan kategori jika belum ada
-    
+
     $dirname = $category;
     $filename = "/images/" . $dirname . "/";
-    
+
     if (!file_exists($filename)) {
         @mkdir("images/" . $dirname, 0777);
-    } 
-    
-    
+    }
+
+
 }
 
 function image_name_cleaner($name) { //menghilangkan garis miring di nama foto
@@ -270,11 +270,11 @@ function image_name_cleaner($name) { //menghilangkan garis miring di nama foto
 
 function downloadFile($url, $category, $product_name) { //download image dari tokopedia dan menyimpan di folder images/$category/$filename
     $product_name = image_name_cleaner($product_name); //menggunakan image_name_cleaner()
-    
+
     directory_check($category); //menggunakan directory_check()
-    
+
     $path = 'images/'.$category.'/'.$product_name.'.jpg'; //merangkai path foto di folder
-    
+
     $newfname = $path;
     $file = fopen($url, 'rb');
     if ($file) {

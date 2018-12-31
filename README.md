@@ -1,4 +1,5 @@
 # toped_grabber
 Tokopedia data grabber
 
-Dor!
+List to do :
+- adding db structure from my pc

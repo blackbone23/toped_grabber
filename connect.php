@@ -1,7 +1,10 @@
  <?php
 $servername = "localhost";
 $username = "root";
+// password for Xampp is NULL
+// password for MAMP is root
 $password = "";
+// $password = "root";
 $db_name = "test";
 
 // Create connection
@@ -16,4 +19,4 @@ if (!$conn) {
 
 mysql_select_db("test",$conn) or die("Couldn't select database.");
 
-?> 
+?>

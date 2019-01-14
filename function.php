@@ -150,6 +150,9 @@ function skuLetter($category){ //redirect kategori ke SKU
         case "tinta canon original":
             return "TCO";
             break;
+        case "tinta hp original":
+            return "THO";
+            break;
         case "tinta brother original":
             return "TBO";
             break;

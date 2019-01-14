@@ -42,6 +42,7 @@
                                     <input type="checkbox" name="category" value="scanner"> SCANNER</input><br/>
                                     <input type="checkbox" name="category" value="tinta epson original"> TINTA EPSON ORIGINAL</input><br/>
                                     <input type="checkbox" name="category" value="tinta canon original"> TINTA CANON ORIGINAL</input><br/>
+                                    <input type="checkbox" name="category" value="tinta hp original"> TINTA HP ORIGINAL</input><br/>
                                     <input type="checkbox" name="category" value="tinta brother original"> TINTA BROTHER ORIGINAL</input><br/>
                                     <input type="checkbox" name="category" value="networking brand asus"> NETWORKING BRAND ASUS</input><br/>
                                     <input type="checkbox" name="category" value="networking brand dlink"> NETWORKING BRAND DLINK</input><br/>

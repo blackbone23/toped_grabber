@@ -165,16 +165,16 @@ function skuLetter($category){ //redirect kategori ke SKU
         case "networking brand tenda":
             return "NBTD";
             break;
-        case "external hdd 2'5":
+        case "external hdd 2.5":
             return "EHF";
             break;
-        case "external hdd 3'5":
+        case "external hdd 3.5":
             return "EHN";
             break;
-        case "internal hdd 2'5":
+        case "internal hdd 2.5":
             return "IHF";
             break;
-        case "internal hdd 3'5":
+        case "internal hdd 3.5":
             return "IHN";
             break;
         case "modem":

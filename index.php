@@ -47,10 +47,10 @@
                                     <input type="checkbox" name="category" value="networking brand dlink"> NETWORKING BRAND DLINK</input><br/>
                                     <input type="checkbox" name="category" value="networking brand tp-link"> NETWORKING BRAND TP-LINK</input><br/>
                                     <input type="checkbox" name="category" value="networking brand tenda"> NETWORKING BRAND TENDA</input><br/>
-                                    <input type="checkbox" name="category" value="external hdd 2'5"> EXTERNAL HDD 2'5</input><br/>
-                                    <input type="checkbox" name="category" value="external hdd 3'5"> EXTERNAL HDD 3'5</input><br/>
-                                    <input type="checkbox" name="category" value="internal hdd 2'5"> INTERNAL HDD 2'5</input><br/>
-                                    <input type="checkbox" name="category" value="internal hdd 3'5"> INTERNAL HDD 3'5</input><br/>
+                                    <input type="checkbox" name="category" value="external hdd 2.5"> EXTERNAL HDD 2'5</input><br/>
+                                    <input type="checkbox" name="category" value="external hdd 3.5"> EXTERNAL HDD 3'5</input><br/>
+                                    <input type="checkbox" name="category" value="internal hdd 2.5"> INTERNAL HDD 2'5</input><br/>
+                                    <input type="checkbox" name="category" value="internal hdd 3.5"> INTERNAL HDD 3'5</input><br/>
                                     <input type="checkbox" name="category" value="modem"> MODEM</input><br/>
                                     <input type="checkbox" name="category" value="ssd"> SSD</input><br/>
                                     <input type="checkbox" name="category" value="memory card"> MEMORY CARD</input><br/>
@@ -75,7 +75,7 @@
                                     <input type="checkbox" name="category" value="pointer"> POINTER</input><br/>
                                     <input type="checkbox" name="category" value="thermal paste"> THERMAL PASTE</input><br/>
                                   <!-- /select-->
-                                </div> 
+                                </div>
         						<div class="form-group">
         							<label for="name">URL tokopedia</label>
         							<input type="text" name="url" id="url" class="form-control">
@@ -87,7 +87,7 @@
         		</div>
         	</div>
 		</div>
-		
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/boostrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</body>

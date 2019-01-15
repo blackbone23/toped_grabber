@@ -68,7 +68,7 @@
                                     <input type="checkbox" name="category" value="layar projector"> LAYAR PROJECTOR</input><br/>
                                     <input type="checkbox" name="category" value="speaker"> SPEAKER</input><br/>
                                     <input type="checkbox" name="category" value="gaming peripheral"> GAMING PERIPHERAL</input><br/>
-                                    <input type="checkbox" name="category" value="ups & stabilizer"> UPS & STABILIZER</input><br/>
+                                    <input type="checkbox" name="category" value="psu, ups & stabilizer"> PSU, UPS & STABILIZER</input><br/>
                                     <input type="checkbox" name="category" value="fingerprint"> FINGERPRINT</input><br/>
                                     <input type="checkbox" name="category" value="kertas foto"> KERTAS FOTO</input><br/>
                                     <input type="checkbox" name="category" value="tinta refill"> TINTA REFILL</input><br/>

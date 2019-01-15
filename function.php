@@ -228,7 +228,7 @@ function skuLetter($category){ //redirect kategori ke SKU
         case "gaming peripheral":
             return "GMPL";
             break;
-        case "ups & stabilizer":
+        case "psu, ups & stabilizer":
             return "USTB";
             break;
         case "fingerprint":

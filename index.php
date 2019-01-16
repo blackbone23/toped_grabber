@@ -48,6 +48,7 @@
                                     <input type="checkbox" name="category" value="networking brand dlink"> NETWORKING BRAND DLINK</input><br/>
                                     <input type="checkbox" name="category" value="networking brand tp-link"> NETWORKING BRAND TP-LINK</input><br/>
                                     <input type="checkbox" name="category" value="networking brand tenda"> NETWORKING BRAND TENDA</input><br/>
+                                    <input type="checkbox" name="category" value="networking brand mikrotik"> NETWORKING BRAND Mikrotik</input><br/>
                                     <input type="checkbox" name="category" value="external hdd 2.5"> EXTERNAL HDD 2'5</input><br/>
                                     <input type="checkbox" name="category" value="external hdd 3.5"> EXTERNAL HDD 3'5</input><br/>
                                     <input type="checkbox" name="category" value="internal hdd 2.5"> INTERNAL HDD 2'5</input><br/>

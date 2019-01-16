@@ -168,6 +168,9 @@ function skuLetter($category){ //redirect kategori ke SKU
         case "networking brand tenda":
             return "NBTD";
             break;
+        case "networking brand mikrotik":
+            return "NBMK";
+            break;
         case "external hdd 2.5":
             return "EHF";
             break;
